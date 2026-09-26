@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lesson on Ping, Latency, Data Packets, and Game Servers by Josh.">
+    <meta name="keywords" content="ping, latency, game server, tick rate, networking, packet loss">
+    <meta name="author" content="Josh">
+    <title>Behind the Screen | Lesson 1: Ping &amp; Servers</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/media/logo.png" alt="Behind the Screen Logo" id="site-logo">
+        <h1>Behind the Screen</h1>
+        <p class="tagline">The Computer Science Behind Online Multiplayer Gaming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="lesson_josh.html">1. Ping &amp; Servers</a></li>
+            <li><a href="lesson_nick.html">2. Engines &amp; Graphics</a></li>
+            <li><a href="lesson_fadil.html">3. Netcode &amp; Sync</a></li>
+            <li><a href="lesson_zainab.html">4. Anti-Cheat &amp; Security</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-column">
+            <article>
+                <h2>Lesson 1: How Multiplayer Games Connect (Ping, Latency &amp; Servers)</h2>
+                <p><strong>Author:</strong> Josh (HTML Lead)</p>
+
+                <h3>1. What is Latency and Ping?</h3>
+                <p>In online gaming, <strong>latency</strong> refers to the total time it takes for a data packet to travel from your gaming device (the client), reach the game server, and send back a response. This duration is measured in milliseconds (ms) and is commonly referred to as your <strong>ping</strong>.</p>
+
+                <ul>
+                    <li><strong>0 to 30 ms:</strong> Optimal connection. In-game actions feel instant.</li>
+                    <li><strong>31 to 80 ms:</strong> Playable connection. Slight delay, rarely noticeable in casual play.</li>
+                    <li><strong>80 to 150+ ms:</strong> High latency. Rubberbanding, delayed shots, and visual desync occur.</li>
+                </ul>
+
+                <h3>2. How Data Travels: UDP vs. TCP</h3>
+                <p>Websites use <em>TCP (Transmission Control Protocol)</em> because every single piece of data must arrive accurately without losing a byte. Multiplayer games, however, use <em>UDP (User Datagram Protocol)</em>. UDP prioritizes raw speed over absolute reliability, allowing games to fire constant streams of position updates without waiting to re-transmit lost packets.</p>
+
+                <h3>3. Server Tick Rates Explained</h3>
+                <p>A server's <strong>tick rate</strong> measures how many times per second the game server processes game logic and broadcasts the updated world state back to every connected player:</p>
+
+                <ol>
+                    <li>The server collects player inputs (movement, firing).</li>
+                    <li>The server simulates physics and checks for collisions or damage.</li>
+                    <li>The server broadcasts the updated positions to all players.</li>
+                </ol>
+
+                <p>A 64-tick server updates 64 times every second (~15.6 ms per tick), whereas a competitive 128-tick server updates 128 times every second (~7.8 ms per tick), delivering far more responsive gameplay.</p>
+            </article>
+        </section>
+
+        <aside class="sidebar-column">
+            <h3>Lesson Roadmap</h3>
+            <ul>
+                <li><a href="index.html">&larr; Return Home</a></li>
+                <li><a href="lesson_nick.html">Lesson 2: Engines &amp; Graphics &rarr;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Team 5 - Behind the Screen Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lesson on Game Engines, Graphics Pipelines, and Rendering by Nick.">
+    <meta name="keywords" content="game engine, unreal engine, unity, gpu, cpu, draw calls, rendering">
+    <meta name="author" content="Nick">
+    <title>Behind the Screen | Lesson 2: Engines &amp; Graphics</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/media/logo.png" alt="Behind the Screen Logo" id="site-logo">
+        <h1>Behind the Screen</h1>
+        <p class="tagline">The Computer Science Behind Online Multiplayer Gaming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="lesson_josh.html">1. Ping &amp; Servers</a></li>
+            <li><a href="lesson_nick.html">2. Engines &amp; Graphics</a></li>
+            <li><a href="lesson_fadil.html">3. Netcode &amp; Sync</a></li>
+            <li><a href="lesson_zainab.html">4. Anti-Cheat &amp; Security</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-column">
+            <article>
+                <h2>Lesson 2: Game Engines &amp; Graphics Rendering</h2>
+                <p><strong>Author:</strong> Nick (CSS Lead)</p>
+
+                <h3>1. What Does a Game Engine Do?</h3>
+                <p>A <strong>game engine</strong> (such as Unreal Engine or Unity) is the core software architecture running a game. It manages graphics rendering, audio pipelines, physics collisions, memory usage, and user input simultaneously.</p>
+
+                <h3>2. The Rendering Pipeline (CPU to GPU)</h3>
+                <p>Every single frame displayed on your screen goes through a rapid multi-step processing pipeline:</p>
+                <ol>
+                    <li><strong>CPU Simulation:</strong> Calculates character coordinates, collision boundaries, and artificial intelligence decisions.</li>
+                    <li><strong>Draw Calls:</strong> The CPU sends instructions telling the GPU what 3D meshes and materials exist in the scene.</li>
+                    <li><strong>GPU Rasterization:</strong> The GPU calculates lighting, shadows, shaders, and camera perspectives, turning 3D mathematical vectors into 2D pixels on your screen.</li>
+                </ol>
+
+                <h3>3. Client-Side Graphics vs. Server-Side Logic</h3>
+                <p>Game servers do not stream video to your computer. Your local device renders all high-definition graphics stored on your hard drive, while the server only broadcasts light numerical coordinates (x, y, z positions).</p>
+            </article>
+        </section>
+
+        <aside class="sidebar-column">
+            <h3>Lesson Roadmap</h3>
+            <ul>
+                <li><a href="lesson_josh.html">&larr; Lesson 1: Ping &amp; Servers</a></li>
+                <li><a href="lesson_fadil.html">Lesson 3: Netcode &amp; Sync &rarr;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Team 5 - Behind the Screen Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

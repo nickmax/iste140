@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lesson on Netcode, Interpolation, and Lag Compensation by Fadil.">
+    <meta name="keywords" content="netcode, lag compensation, client prediction, interpolation, hitscan">
+    <meta name="author" content="Fadil">
+    <title>Behind the Screen | Lesson 3: Netcode &amp; Sync</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/media/logo.png" alt="Behind the Screen Logo" id="site-logo">
+        <h1>Behind the Screen</h1>
+        <p class="tagline">The Computer Science Behind Online Multiplayer Gaming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="lesson_josh.html">1. Ping &amp; Servers</a></li>
+            <li><a href="lesson_nick.html">2. Engines &amp; Graphics</a></li>
+            <li><a href="lesson_fadil.html">3. Netcode &amp; Sync</a></li>
+            <li><a href="lesson_zainab.html">4. Anti-Cheat &amp; Security</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-column">
+            <article>
+                <h2>Lesson 3: Netcode &amp; Synchronization</h2>
+                <p><strong>Author:</strong> Fadil (Content Lead)</p>
+
+                <h3>1. What is Netcode?</h3>
+                <p><strong>Netcode</strong> refers to the algorithms used to sync game states across players connected with varying network latencies. It masks delays so gameplay feels real-time.</p>
+
+                <h3>2. Client Prediction and Interpolation</h3>
+                <ul>
+                    <li><strong>Client-Side Prediction:</strong> When you move, your computer updates your character's local position instantly without waiting for the server's response packet.</li>
+                    <li><strong>Interpolation:</strong> Smooths out enemy movement by blending positions between incoming data updates, preventing jittery player models.</li>
+                </ul>
+
+                <h3>3. Lag Compensation</h3>
+                <p>When a player with higher latency fires a shot, the server rewinds time on its master clock to check where hitboxes were located when the player pressed the trigger. This prevents high-latency players from having to lead their shots unnaturally.</p>
+            </article>
+        </section>
+
+        <aside class="sidebar-column">
+            <h3>Lesson Roadmap</h3>
+            <ul>
+                <li><a href="lesson_nick.html">&larr; Lesson 2: Engines &amp; Graphics</a></li>
+                <li><a href="lesson_zainab.html">Lesson 4: Anti-Cheat &amp; Security &rarr;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Team 5 - Behind the Screen Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

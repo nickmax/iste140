@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lesson on Anti-Cheat Systems, Server Authority, and Security by Zainab.">
+    <meta name="keywords" content="anti-cheat, security, kernel mode, user mode, aimbot, server authority">
+    <meta name="author" content="Zainab">
+    <title>Behind the Screen | Lesson 4: Anti-Cheat &amp; Security</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/media/logo.png" alt="Behind the Screen Logo" id="site-logo">
+        <h1>Behind the Screen</h1>
+        <p class="tagline">The Computer Science Behind Online Multiplayer Gaming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="lesson_josh.html">1. Ping &amp; Servers</a></li>
+            <li><a href="lesson_nick.html">2. Engines &amp; Graphics</a></li>
+            <li><a href="lesson_fadil.html">3. Netcode &amp; Sync</a></li>
+            <li><a href="lesson_zainab.html">4. Anti-Cheat &amp; Security</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-column">
+            <article>
+                <h2>Lesson 4: Anti-Cheat &amp; Game Security</h2>
+                <p><strong>Author:</strong> Zainab (Report Lead)</p>
+
+                <h3>1. Common Exploits (Aimbots &amp; ESP)</h3>
+                <p>Cheats manipulate data stored locally in system RAM. <em>Aimbots</em> automatically adjust crosshairs using enemy coordinate data, while <em>Wallhacks (ESP)</em> force graphic drivers to draw player models through geometry.</p>
+
+                <h3>2. Server Authority: Never Trust the Client</h3>
+                <p>Authoritative game servers validate every client request. If a client attempts to forge packets claiming impossible speed or instant health regeneration, the server rejects the action.</p>
+
+                <h3>3. User-Mode (Ring 3) vs. Kernel-Mode (Ring 0)</h3>
+                <p>Traditional anti-cheats operate in <strong>User Mode (Ring 3)</strong>, scanning background applications. Modern competitive games utilize <strong>Kernel-Mode (Ring 0)</strong> drivers, loading at system boot to stop low-level memory manipulation.</p>
+            </article>
+        </section>
+
+        <aside class="sidebar-column">
+            <h3>Lesson Roadmap</h3>
+            <ul>
+                <li><a href="lesson_fadil.html">&larr; Lesson 3: Netcode &amp; Sync</a></li>
+                <li><a href="quiz.html">Take the Quiz &rarr;</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Team 5 - Behind the Screen Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

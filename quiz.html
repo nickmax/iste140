@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Test your knowledge on online gaming technology.">
+    <meta name="keywords" content="quiz, gaming, networking, ping, netcode, anti-cheat">
+    <meta name="author" content="Josh, Nick, Fadil, Zainab">
+    <title>Behind the Screen | Quiz</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/media/logo.png" alt="Behind the Screen Logo" id="site-logo">
+        <h1>Behind the Screen</h1>
+        <p class="tagline">The Computer Science Behind Online Multiplayer Gaming</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="lesson_josh.html">1. Ping &amp; Servers</a></li>
+            <li><a href="lesson_nick.html">2. Engines &amp; Graphics</a></li>
+            <li><a href="lesson_fadil.html">3. Netcode &amp; Sync</a></li>
+            <li><a href="lesson_zainab.html">4. Anti-Cheat &amp; Security</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="references.html">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="content-column">
+            <h2>Gaming Technology Quiz</h2>
+            <p>Answer the following questions based on Lessons 1 through 4:</p>
+
+            <form action="#" method="post" id="quiz-form">
+                <fieldset>
+                    <legend>Question 1: Networking</legend>
+                    <p>Which protocol do real-time multiplayer games use to prioritize connection speed over lost packet retransmission?</p>
+                    <label><input type="radio" name="q1" value="a"> TCP</label><br>
+                    <label><input type="radio" name="q1" value="b"> UDP</label><br>
+                    <label><input type="radio" name="q1" value="c"> HTTP</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 2: Graphics</legend>
+                    <p>Which hardware component handles draw calls and calculates final 2D frame rendering?</p>
+                    <label><input type="radio" name="q2" value="a"> CPU</label><br>
+                    <label><input type="radio" name="q2" value="b"> GPU</label><br>
+                    <label><input type="radio" name="q2" value="c"> RAM</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 3: Netcode</legend>
+                    <p>What technique does a server use when it rewinds time to check where hitboxes were when a delayed packet was sent?</p>
+                    <label><input type="radio" name="q3" value="a"> Lag Compensation</label><br>
+                    <label><input type="radio" name="q3" value="b"> Rubberbanding</label><br>
+                    <label><input type="radio" name="q3" value="c"> Raytracing</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 4: Security</legend>
+                    <p>At which operating system level do modern anti-cheat drivers operate to prevent deep memory modification?</p>
+                    <label><input type="radio" name="q4" value="a"> User Mode (Ring 3)</label><br>
+                    <label><input type="radio" name="q4" value="b"> Kernel Mode (Ring 0)</label><br>
+                    <label><input type="radio" name="q4" value="c"> Browser Mode</label>
+                </fieldset>
+
+                <br>
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </section>
+
+        <aside class="sidebar-column">
+            <h3>Review Materials</h3>
+            <ul>
+                <li><a href="lesson_josh.html">Review Lesson 1</a></li>
+                <li><a href="lesson_nick.html">Review Lesson 2</a></li>
+                <li><a href="lesson_fadil.html">Review Lesson 3</a></li>
+                <li><a href="lesson_zainab.html">Review Lesson 4</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Team 5 - Behind the Screen Project. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

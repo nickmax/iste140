@@ -30,33 +30,32 @@
         </ul>
     </nav>
 
+    <!-- The sidebar and page content share a two-column layout. -->
     <main>
-        <section class="content-column">
-            <article>
-                <h2>Lesson 3: Netcode &amp; Synchronization</h2>
-                <p><strong>Author:</strong> Fadil (Content Lead)</p>
-
-                <h3>1. What is Netcode?</h3>
-                <p><strong>Netcode</strong> refers to the algorithms used to sync game states across players connected with varying network latencies. It masks delays so gameplay feels real-time.</p>
-
-                <h3>2. Client Prediction and Interpolation</h3>
-                <ul>
-                    <li><strong>Client-Side Prediction:</strong> When you move, your computer updates your character's local position instantly without waiting for the server's response packet.</li>
-                    <li><strong>Interpolation:</strong> Smooths out enemy movement by blending positions between incoming data updates, preventing jittery player models.</li>
-                </ul>
-
-                <h3>3. Lag Compensation</h3>
-                <p>When a player with higher latency fires a shot, the server rewinds time on its master clock to check where hitboxes were located when the player pressed the trigger. This prevents high-latency players from having to lead their shots unnaturally.</p>
-            </article>
-        </section>
-
         <aside class="sidebar-column">
-            <h3>Lesson Roadmap</h3>
+            <h2>Lesson Roadmap</h2>
             <ul>
                 <li><a href="lesson_nick.html">&larr; Lesson 2: Engines &amp; Graphics</a></li>
                 <li><a href="lesson_zainab.html">Lesson 4: Anti-Cheat &amp; Security &rarr;</a></li>
             </ul>
         </aside>
+
+        <section class="content-column">
+            <h2>Lesson 3: Netcode &amp; Synchronization</h2>
+            <p><strong>Author:</strong> Fadil (Content Lead)</p>
+
+            <h3>1. What is Netcode?</h3>
+            <p><strong>Netcode</strong> is the code that keeps players in sync over a network. It helps hide connection delays so the game feels responsive.</p>
+
+            <h3>2. Client Prediction and Interpolation</h3>
+            <ul>
+                <li><strong>Client-Side Prediction:</strong> When you move, your computer updates your character's position straight away instead of waiting for a reply from the server.</li>
+                <li><strong>Interpolation:</strong> Blends positions between updates so other players move smoothly on your screen.</li>
+            </ul>
+
+            <h3>3. Lag Compensation</h3>
+            <p>When a delayed shot reaches the server, it checks where the hitboxes were when the player fired. This helps account for the delay between firing a shot and the server receiving it.</p>
+        </section>
     </main>
 
     <footer>

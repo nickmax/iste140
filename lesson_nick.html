@@ -30,35 +30,34 @@
         </ul>
     </nav>
 
+    <!-- The sidebar and page content share a two-column layout. -->
     <main>
-        <section class="content-column">
-            <article>
-                <h2>Lesson 2: Game Engines &amp; Graphics Rendering</h2>
-                <p><strong>Author:</strong> Nick (CSS Lead)</p>
-
-                <h3>1. What Does a Game Engine Do?</h3>
-                <p>A <strong>game engine</strong> (such as Unreal Engine or Unity) is the core software architecture running a game. It manages graphics rendering, audio pipelines, physics collisions, memory usage, and user input simultaneously.</p>
-
-                <h3>2. The Rendering Pipeline (CPU to GPU)</h3>
-                <p>Every single frame displayed on your screen goes through a rapid multi-step processing pipeline:</p>
-                <ol>
-                    <li><strong>CPU Simulation:</strong> Calculates character coordinates, collision boundaries, and artificial intelligence decisions.</li>
-                    <li><strong>Draw Calls:</strong> The CPU sends instructions telling the GPU what 3D meshes and materials exist in the scene.</li>
-                    <li><strong>GPU Rasterization:</strong> The GPU calculates lighting, shadows, shaders, and camera perspectives, turning 3D mathematical vectors into 2D pixels on your screen.</li>
-                </ol>
-
-                <h3>3. Client-Side Graphics vs. Server-Side Logic</h3>
-                <p>Game servers do not stream video to your computer. Your local device renders all high-definition graphics stored on your hard drive, while the server only broadcasts light numerical coordinates (x, y, z positions).</p>
-            </article>
-        </section>
-
         <aside class="sidebar-column">
-            <h3>Lesson Roadmap</h3>
+            <h2>Lesson Roadmap</h2>
             <ul>
                 <li><a href="lesson_josh.html">&larr; Lesson 1: Ping &amp; Servers</a></li>
                 <li><a href="lesson_fadil.html">Lesson 3: Netcode &amp; Sync &rarr;</a></li>
             </ul>
         </aside>
+
+        <section class="content-column">
+            <h2>Lesson 2: Game Engines &amp; Graphics Rendering</h2>
+            <p><strong>Author:</strong> Nick (CSS Lead)</p>
+
+            <h3>1. What Does a Game Engine Do?</h3>
+            <p>A <strong>game engine</strong>, such as Unreal Engine or Unity, is the software that runs a game. It handles graphics and sound, along with physics, memory and player input.</p>
+
+            <h3>2. The Rendering Pipeline (CPU to GPU)</h3>
+            <p>Each frame on your screen goes through these steps:</p>
+            <ol>
+                <li><strong>CPU Simulation:</strong> Works out character positions, collisions and decisions for computer-controlled characters.</li>
+                <li><strong>Draw Calls:</strong> The CPU tells the GPU which 3D objects and materials to draw.</li>
+                <li><strong>GPU Rasterization:</strong> The GPU uses the scene geometry, camera settings and shaders to produce the pixels you see on screen.</li>
+            </ol>
+
+            <h3>3. Client-Side Graphics vs. Server-Side Logic</h3>
+            <p>Game servers do not stream video to your computer. Your local device renders all high-definition graphics stored on your hard drive, while the server only broadcasts light numerical coordinates (x, y, z positions).</p>
+        </section>
     </main>
 
     <footer>

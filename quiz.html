@@ -30,51 +30,10 @@
         </ul>
     </nav>
 
+    <!-- The sidebar and page content share a two-column layout. -->
     <main>
-        <section class="content-column">
-            <h2>Gaming Technology Quiz</h2>
-            <p>Answer the following questions based on Lessons 1 through 4:</p>
-
-            <form action="#" method="post" id="quiz-form">
-                <fieldset>
-                    <legend>Question 1: Networking</legend>
-                    <p>Which protocol do real-time multiplayer games use to prioritize connection speed over lost packet retransmission?</p>
-                    <label><input type="radio" name="q1" value="a"> TCP</label><br>
-                    <label><input type="radio" name="q1" value="b"> UDP</label><br>
-                    <label><input type="radio" name="q1" value="c"> HTTP</label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Question 2: Graphics</legend>
-                    <p>Which hardware component handles draw calls and calculates final 2D frame rendering?</p>
-                    <label><input type="radio" name="q2" value="a"> CPU</label><br>
-                    <label><input type="radio" name="q2" value="b"> GPU</label><br>
-                    <label><input type="radio" name="q2" value="c"> RAM</label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Question 3: Netcode</legend>
-                    <p>What technique does a server use when it rewinds time to check where hitboxes were when a delayed packet was sent?</p>
-                    <label><input type="radio" name="q3" value="a"> Lag Compensation</label><br>
-                    <label><input type="radio" name="q3" value="b"> Rubberbanding</label><br>
-                    <label><input type="radio" name="q3" value="c"> Raytracing</label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>Question 4: Security</legend>
-                    <p>At which operating system level do modern anti-cheat drivers operate to prevent deep memory modification?</p>
-                    <label><input type="radio" name="q4" value="a"> User Mode (Ring 3)</label><br>
-                    <label><input type="radio" name="q4" value="b"> Kernel Mode (Ring 0)</label><br>
-                    <label><input type="radio" name="q4" value="c"> Browser Mode</label>
-                </fieldset>
-
-                <br>
-                <button type="submit">Submit Quiz</button>
-            </form>
-        </section>
-
         <aside class="sidebar-column">
-            <h3>Review Materials</h3>
+            <h2>Review Materials</h2>
             <ul>
                 <li><a href="lesson_josh.html">Review Lesson 1</a></li>
                 <li><a href="lesson_nick.html">Review Lesson 2</a></li>
@@ -82,6 +41,52 @@
                 <li><a href="lesson_zainab.html">Review Lesson 4</a></li>
             </ul>
         </aside>
+
+        <section class="content-column">
+            <h2>Gaming Technology Quiz</h2>
+            <p>Answer the following questions based on Lessons 1 through 4:</p>
+
+            <form id="quiz-form">
+                <fieldset>
+                    <legend>Question 1: Networking</legend>
+                    <p>Which protocol lets games send updates without waiting for lost packets to be sent again?</p>
+                    <label><input type="radio" name="q1" value="a"> TCP</label><br>
+                    <label><input type="radio" name="q1" value="b"> UDP</label><br>
+                    <label><input type="radio" name="q1" value="c"> HTTP</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 2: Graphics</legend>
+                    <p>Which hardware component draws the final image on your screen?</p>
+                    <label><input type="radio" name="q2" value="a"> CPU</label><br>
+                    <label><input type="radio" name="q2" value="b"> GPU</label><br>
+                    <label><input type="radio" name="q2" value="c"> RAM</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 3: Netcode</legend>
+                    <p>What technique checks earlier hitbox positions when a delayed shot reaches the server?</p>
+                    <label><input type="radio" name="q3" value="a"> Lag Compensation</label><br>
+                    <label><input type="radio" name="q3" value="b"> Rubberbanding</label><br>
+                    <label><input type="radio" name="q3" value="c"> Raytracing</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Question 4: Security</legend>
+                    <p>Which operating system level gives anti-cheat drivers deeper access to check memory changes?</p>
+                    <label><input type="radio" name="q4" value="a"> User Mode (Ring 3)</label><br>
+                    <label><input type="radio" name="q4" value="b"> Kernel Mode (Ring 0)</label><br>
+                    <label><input type="radio" name="q4" value="c"> Browser Mode</label>
+                </fieldset>
+
+                <br>
+                <button type="reset">Clear Answers</button>
+                <details>
+                    <summary>Check your answers</summary>
+                    <p>1. UDP; 2. GPU; 3. Lag Compensation; 4. Kernel Mode (Ring 0).</p>
+                </details>
+            </form>
+        </section>
     </main>
 
     <footer>

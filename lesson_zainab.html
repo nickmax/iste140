@@ -30,30 +30,29 @@
         </ul>
     </nav>
 
+    <!-- The sidebar and page content share a two-column layout. -->
     <main>
-        <section class="content-column">
-            <article>
-                <h2>Lesson 4: Anti-Cheat &amp; Game Security</h2>
-                <p><strong>Author:</strong> Zainab (Report Lead)</p>
-
-                <h3>1. Common Exploits (Aimbots &amp; ESP)</h3>
-                <p>Cheats manipulate data stored locally in system RAM. <em>Aimbots</em> automatically adjust crosshairs using enemy coordinate data, while <em>Wallhacks (ESP)</em> force graphic drivers to draw player models through geometry.</p>
-
-                <h3>2. Server Authority: Never Trust the Client</h3>
-                <p>Authoritative game servers validate every client request. If a client attempts to forge packets claiming impossible speed or instant health regeneration, the server rejects the action.</p>
-
-                <h3>3. User-Mode (Ring 3) vs. Kernel-Mode (Ring 0)</h3>
-                <p>Traditional anti-cheats operate in <strong>User Mode (Ring 3)</strong>, scanning background applications. Modern competitive games utilize <strong>Kernel-Mode (Ring 0)</strong> drivers, loading at system boot to stop low-level memory manipulation.</p>
-            </article>
-        </section>
-
         <aside class="sidebar-column">
-            <h3>Lesson Roadmap</h3>
+            <h2>Lesson Roadmap</h2>
             <ul>
                 <li><a href="lesson_fadil.html">&larr; Lesson 3: Netcode &amp; Sync</a></li>
                 <li><a href="quiz.html">Take the Quiz &rarr;</a></li>
             </ul>
         </aside>
+
+        <section class="content-column">
+            <h2>Lesson 4: Anti-Cheat &amp; Game Security</h2>
+            <p><strong>Author:</strong> Zainab (Report Lead)</p>
+
+            <h3>1. Common Exploits (Aimbots &amp; ESP)</h3>
+            <p>Cheats can use game data stored in memory. An <em>aimbot</em> uses enemy positions to aim for the player. <em>Wallhacks (ESP)</em> show information about players hidden behind walls.</p>
+
+            <h3>2. Server Authority: Never Trust the Client</h3>
+            <p>The server checks requests from players before accepting them. For example, it can reject a movement update that claims a player travelled faster than the game allows.</p>
+
+            <h3>3. User-Mode (Ring 3) vs. Kernel-Mode (Ring 0)</h3>
+            <p>Some anti-cheat programs run in <strong>user mode (Ring 3)</strong> and scan background applications. Others use <strong>kernel-mode (Ring 0)</strong> drivers to check for changes at a deeper level of the operating system.</p>
+        </section>
     </main>
 
     <footer>

@@ -30,51 +30,60 @@
         </ul>
     </nav>
 
+    <!-- The sidebar and page content share a two-column layout. -->
     <main>
-        <section class="content-column">
-            <h2>About Our Team</h2>
-            <p>Meet the four team members behind Team 5's online gaming technology tutorial platform.</p>
-
-            <table class="team-table">
-                <thead>
-                    <tr>
-                        <th>Member</th>
-                        <th>Role</th>
-                        <th>Responsibilities &amp; Lesson Focus</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Josh</strong></td>
-                        <td>HTML Lead</td>
-                        <td>Folder structure, base HTML scaffolding, terminal setup, Lesson 1 (Ping &amp; Servers).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nick</strong></td>
-                        <td>CSS Lead</td>
-                        <td>CSS stylesheet, layout structure, color schemes, responsive styling, Lesson 2 (Engines &amp; Graphics).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Fadil</strong></td>
-                        <td>Content Lead</td>
-                        <td>Site introduction text, tutorial topic alignment, quiz editing, Lesson 3 (Netcode &amp; Sync).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Zainab</strong></td>
-                        <td>Report Lead</td>
-                        <td>W3C HTML/CSS validation, error log compilation, master report PDF assembly, Lesson 4 (Anti-Cheat).</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
         <aside class="sidebar-column">
-            <h3>Quick Links</h3>
+            <h2>Quick Links</h2>
             <ul>
                 <li><a href="index.html">Return Home</a></li>
                 <li><a href="quiz.html">Take the Quiz</a></li>
             </ul>
         </aside>
+
+        <section class="content-column">
+            <h2>About Our Team</h2>
+            <p>Team 5 has four members. Each person works on a different lesson and part of the website.</p>
+
+            <table>
+                <caption>Team 5 members and lessons</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Member number</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role in the team</th>
+                        <th scope="col">Lesson title</th>
+                        <th scope="col">Page file name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td><th scope="row">Josh</th><td>HTML Lead</td><td>Ping &amp; Servers</td><td><a href="lesson_josh.html">lesson_josh.html</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td><th scope="row">Nick</th><td>CSS Lead</td><td>Engines &amp; Graphics</td><td><a href="lesson_nick.html">lesson_nick.html</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td><th scope="row">Fadil</th><td>Content Lead</td><td>Netcode &amp; Sync</td><td><a href="lesson_fadil.html">lesson_fadil.html</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td><th scope="row">Zainab</th><td>Report Lead</td><td>Anti-Cheat &amp; Security</td><td><a href="lesson_zainab.html">lesson_zainab.html</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Josh</h3>
+            <p>Josh organizes the HTML files and shared page structure. His lesson explains ping, latency and game servers.</p>
+
+            <h3>Nick</h3>
+            <p>Nick works on the shared stylesheet, colours and page layout. His lesson introduces game engines and graphics rendering.</p>
+
+            <h3>Fadil</h3>
+            <p>Fadil works on the introduction, lesson content and quiz. His lesson explains how games keep players synchronized.</p>
+
+            <h3>Zainab</h3>
+            <p>Zainab organizes validation records and project documentation. Her lesson introduces anti-cheat systems and server security.</p>
+
+        </section>
     </main>
 
     <footer>

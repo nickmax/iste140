@@ -57,22 +57,36 @@ nav a:hover, nav a:focus {
 }
 
 main {
-    display: flex;
     min-height: 65vh;
 }
+/* Clear the floated columns so the footer stays below them. */
+main::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 .sidebar-column {
+    float: left;
     width: 25%;
     padding: 24px;
     background-color: #eee;
 }
 .content-column {
+    float: left;
     width: 75%;
-    min-width: 0;
+    overflow-wrap: anywhere;
     padding: 24px;
 }
 img { max-width: 100%; }
-.featured-media { margin-bottom: 24px; }
+.featured-media {
+    float: left;
+    width: 180px;
+    max-width: 100%;
+    margin: 0 24px 16px 0;
+}
+.featured-media img { height: auto; }
 #team-teaser {
+    clear: both;
     border-top: 1px solid #ccc;
     padding-top: 16px;
 }
@@ -112,7 +126,28 @@ footer p { margin: 0; }
 
 /* Stack the columns on smaller screens. */
 @media (max-width: 700px) {
-    main { display: block; }
-    .sidebar-column, .content-column { width: 100%; }
+    .sidebar-column, .content-column {
+        float: none;
+        width: 100%;
+        padding: 16px;
+    }
+    #site-logo {
+        float: none;
+        display: block;
+        margin: 0 auto 12px;
+    }
+    header { text-align: center; }
+    nav li { width: 50%; }
+    nav ul { font-size: 0; }
+    nav a {
+        width: 100%;
+        font-size: 16px;
+        padding: 10px;
+    }
+    .featured-media {
+        float: none;
+        margin: 0 auto 16px;
+    }
+    table { table-layout: fixed; }
     th, td { padding: 4px; }
 }

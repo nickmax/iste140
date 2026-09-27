@@ -31,7 +31,7 @@
     </nav>
 
     <!-- The sidebar and page content share a two-column layout. -->
-    <main>
+<main>
         <aside class="sidebar-column">
             <h2>Lesson Roadmap</h2>
             <ul>
@@ -45,16 +45,16 @@
             <p><strong>Author:</strong> Fadil (Content Lead)</p>
 
             <h3>1. What is Netcode?</h3>
-            <p><strong>Netcode</strong> is the code that keeps players in sync over a network. It helps hide connection delays so the game feels responsive.</p>
+            <p><strong>Netcode</strong> isn't a single software program. It's a general term for the networking algorithms that developers use to keep players synchronized over the internet. Because network connections are never instant, netcode uses techniques to hide delay and make those fast-paced actions still feel smooth and snappy.</p>
 
             <h3>2. Client Prediction and Interpolation</h3>
             <ul>
-                <li><strong>Client-Side Prediction:</strong> When you move, your computer updates your character's position straight away instead of waiting for a reply from the server.</li>
-                <li><strong>Interpolation:</strong> Blends positions between updates so other players move smoothly on your screen.</li>
+                <li><strong>Client-Side Prediction:</strong> When you press 'W' to walk forward, your local computer updates your character's position on screen instantly rather than waiting 50 ms for the server to confirm it. If the server agrees with your movement, gameplay stays perfectly seamless.</li>
+                <li><strong>Interpolation:</strong> Server updates usually arrive 30 to 60 times a second, but your monitor displays 144+ frames a second. Interpolation smoothly fills in the visual gaps between server updates so other players kinda glide across your screen instead of jittering or teleporting.</li>
             </ul>
 
             <h3>3. Lag Compensation</h3>
-            <p>When a delayed shot reaches the server, it checks where the hitboxes were when the player fired. This helps account for the delay between firing a shot and the server receiving it.</p>
+            <p>Have you ever shot someone on your screen, but hitboxes didn't register because of ping? <strong>Lag compensation</strong> solves this by allowing the server to practically rewind time slightly when you pull the trigger. Then the server checks where your target was located on your screen at the exact millisecond you shot, making sure that clean hits register fairly regardless of slight delay.</p>
         </section>
     </main>
 

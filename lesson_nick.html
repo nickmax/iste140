@@ -31,7 +31,7 @@
     </nav>
 
     <!-- The sidebar and page content share a two-column layout. -->
-    <main>
+<main>
         <aside class="sidebar-column">
             <h2>Lesson Roadmap</h2>
             <ul>
@@ -45,18 +45,18 @@
             <p><strong>Author:</strong> Nick (CSS Lead)</p>
 
             <h3>1. What Does a Game Engine Do?</h3>
-            <p>A <strong>game engine</strong>, such as Unreal Engine or Unity, is the software that runs a game. It handles graphics and sound, along with physics, memory and player input.</p>
+            <p>A <strong>game engine</strong> like Unreal Engine or Unity is the underlying or in a simple way, supporting, software framework that runs a game. Instead of writing code from scratch for every new project, the developers use an engine to manage core background tasks like graphics rendering, audio playback, physics simulation, memory usage, and controller input.</p>
 
             <h3>2. The Rendering Pipeline (CPU to GPU)</h3>
-            <p>Each frame on your screen goes through these steps:</p>
+            <p>Every single individual frame on your screen goes through a split-second pipeline between your computer's processor and graphics card:</p>
             <ol>
-                <li><strong>CPU Simulation:</strong> Works out character positions, collisions and decisions for computer-controlled characters.</li>
-                <li><strong>Draw Calls:</strong> The CPU tells the GPU which 3D objects and materials to draw.</li>
-                <li><strong>GPU Rasterization:</strong> The GPU uses the scene geometry, camera settings and shaders to produce the pixels you see on screen.</li>
+                <li><strong>CPU Simulation:</strong> Calculates character movement, checks for object collisions, and runs AI logic for enemy characters.</li>
+                <li><strong>Draw Calls:</strong> The CPU passes command lists (draw calls) to the graphics card, telling it which 3D models and textures need to be rendered next.</li>
+                <li><strong>GPU Rasterization:</strong> The GPU takes 3D object geometry, lighting settings, and shaders, and turns all that math into the actual colored pixels that you see on your monitor.</li>
             </ol>
 
             <h3>3. Client-Side Graphics vs. Server-Side Logic</h3>
-            <p>Game servers do not stream video to your computer. Your local device renders all high-definition graphics stored on your hard drive, while the server only broadcasts light numerical coordinates (x, y, z positions).</p>
+            <p>Game servers don't stream live video footage to your monitor. In fact, doing that across millions of players would quite literally destroy internet bandwidth. Instead, what happens is, your local device renders high-definition graphics using game files stored directly on your hard drive. And then, the game server only broadcasts lightweight numbers, like player coordinates (x, y, z positions), to keep everyone synced up.</p>
         </section>
     </main>
 

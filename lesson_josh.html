@@ -31,7 +31,7 @@
     </nav>
 
     <!-- The sidebar and page content share a two-column layout. -->
-    <main>
+ <main>
         <aside class="sidebar-column">
             <h2>Lesson Roadmap</h2>
             <ul>
@@ -45,27 +45,27 @@
             <p><strong>Author:</strong> Josh (HTML Lead)</p>
 
             <h3>1. What is Latency and Ping?</h3>
-            <p>In online gaming, <strong>latency</strong> refers to the total time it takes for a data packet to travel from your gaming device (the client), reach the game server, and send back a response. This duration is measured in milliseconds (ms) and is commonly referred to as your <strong>ping</strong>.</p>
+            <p>When you press a button in an online game, your action doesn't hit the screen instantly. There's more to it. <strong>Latency</strong> is the time it takes for a packet of data to travel from your computer or console out to the game server and back. In gaming, we measure this round trip in milliseconds (ms) and call it your <strong>ping</strong>.</p>
 
             <ul>
-                <li><strong>0 to 30 ms:</strong> Optimal connection. In-game actions feel instant.</li>
-                <li><strong>31 to 80 ms:</strong> Playable connection. Slight delay, rarely noticeable in casual play.</li>
-                <li><strong>80 to 150+ ms:</strong> High latency. Rubberbanding, delayed shots, and visual desync occur.</li>
+                <li><strong>0 to 30 ms:</strong> Ideal connection. Everything feels super fast.</li>
+                <li><strong>31 to 80 ms:</strong> Standard playable connection. You might feel a little delay, but it's barely going to affect the gameplay.</li>
+                <li><strong>80 to 150+ ms:</strong> High latency. This is where it gets annoying, you see delayed shots, ghost hits, and similar experiences.</li>
             </ul>
 
             <h3>2. How Data Travels: UDP vs. TCP</h3>
-            <p>Websites use <em>TCP (Transmission Control Protocol)</em> because every single piece of data must arrive accurately without losing a byte. Multiplayer games, however, use <em>UDP (User Datagram Protocol)</em>. UDP prioritizes raw speed over absolute reliability, allowing games to fire constant streams of position updates without waiting to re-transmit lost packets.</p>
+            <p>When you visit a website or download a file, your browser uses <em>TCP (Transmission Control Protocol)</em> because every single byte of data has to arrive in order without any errors. Fast-paced multiplayer games use <em>UDP (User Datagram Protocol)</em> instead. UDP focus more on raw speed. It focuses on player positions constantly and keeps going even if a few packets get lost along the way, all that to avoid game pauses.</p>
 
             <h3>3. Server Tick Rates Explained</h3>
-            <p>A server's <strong>tick rate</strong> measures how many times per second the game server processes game logic and broadcasts the updated world state back to every connected player:</p>
+            <p>A server's <strong>tick rate</strong> is how many times per second the game server processes actions and updates the match state for everyone:</p>
 
             <ol>
-                <li>The server collects player inputs (movement, firing).</li>
-                <li>The server simulates physics and checks for collisions or damage.</li>
-                <li>The server broadcasts the updated positions to all players.</li>
+                <li>The server gathers input data (movement, shots fired) from all connected players.</li>
+                <li>It calculates player movement, physics, and hit detection.</li>
+                <li>It broadcasts the updated world state back out to every player's device.</li>
             </ol>
 
-            <p>A 64-tick server updates 64 times every second (~15.6 ms per tick), whereas a competitive 128-tick server updates 128 times every second (~7.8 ms per tick), delivering far more responsive gameplay.</p>
+            <p>The classic 64-tick server updates 64 times every second (~15.6 ms per tick). Competitive games usually use 128-tick servers (~7.8 ms per update), which makes movement feel very smooth and hit detection a lot more accurate.</p>
         </section>
     </main>
 

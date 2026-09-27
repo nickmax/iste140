@@ -31,7 +31,7 @@
     </nav>
 
     <!-- The sidebar and page content share a two-column layout. -->
-    <main>
+<main>
         <aside class="sidebar-column">
             <h2>Lesson Roadmap</h2>
             <ul>
@@ -45,13 +45,13 @@
             <p><strong>Author:</strong> Zainab (Report Lead)</p>
 
             <h3>1. Common Exploits (Aimbots &amp; ESP)</h3>
-            <p>Cheats can use game data stored in memory. An <em>aimbot</em> uses enemy positions to aim for the player. <em>Wallhacks (ESP)</em> show information about players hidden behind walls.</p>
+            <p>Most game cheats work by hijacking data stored in your computer's system memory (RAM). An <em>aimbot</em> reads enemy coordinates directly from RAM and directs your mouse crosshair to kind of magnetically snap automatically onto enemy heads. <em>ESP (Extra Sensory Perception)</em> or wallhacks take those same coordinates for example to draw enemy outlines, health bars, and box markers right through solid walls.</p>
 
             <h3>2. Server Authority: Never Trust the Client</h3>
-            <p>The server checks requests from players before accepting them. For example, it can reject a movement update that claims a player travelled faster than the game allows.</p>
+            <p>The golden rule of online game security is <strong>never trust the client</strong>. Because developers have no control over what players do on their PCs (locally), the server or when it's online, it's like there's an ultimate authority. If a player edits their game code to try and fly or teleport, that authoritative server checks the action against physical rules and rejects the move instantly.</p>
 
             <h3>3. User-Mode (Ring 3) vs. Kernel-Mode (Ring 0)</h3>
-            <p>Some anti-cheat programs run in <strong>user mode (Ring 3)</strong> and scan background applications. Others use <strong>kernel-mode (Ring 0)</strong> drivers to check for changes at a deeper level of the operating system.</p>
+            <p>Anti-cheat software operates at different security levels inside your computer's operating system. Traditional <strong>user-mode (Ring 3)</strong> anti-cheat runs alongside your regular applications, and scans memory for recognized cheat programs. Modern competitive anti-cheats use <strong>kernel-mode (Ring 0)</strong> drivers, which gives them deep access to the core OS layer so they can block even the sophisticated cheats before they even launch.</p>
         </section>
     </main>
 
